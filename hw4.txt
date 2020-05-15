@@ -1,0 +1,32 @@
+Jeffrey Carino
+Homework 4 Explanations
+
+Boolean Operations in Lua (20 Points)
+
+1a. Booleans I (10 Points)
+
+  t = {}
+  function g(t,k)
+      t[k] = t[k] or 0
+  end
+
+  Explanation:
+  A table t is created. The function g does not return anything but it takes in
+  the table t = {} and a different value k. t[k] on the left side of the 
+  assignment operator will always be false because it is the exact same thing 
+  as the t[k] on the left side. Because t[k] is always false then it will always
+  assign t[k] to 0.
+
+1b. Booleans II (10 Points)
+
+  function h(a)
+      return (a > 0) and a or -a
+  end
+
+  Explanation:
+  A function h returns a positive or negative number. When (a > 0) is false, the
+  and statement will return the first operand, so the statement becomes (a > 0)
+  or -a. The or operator returns the second operand when the first is false, thus
+  when (a > 0) is false, -a is returned. When (a > 0) is true, the and statement
+  returns a, so the statement becomes a or -a. Since a is true, the or operator
+  will return a.
